@@ -33,9 +33,14 @@ End
 
 ---
 
-## ⚡ Quick Start (30 Seconds)
+## ⚡ Quick Start (30 Seconds)   [ ... COMMING SOON ... ]
 
-### 1. Install Lexora
+### 1. Install Lexora 
+```cmd
+(Note: Working on downloadable files will update soon till that time you can user web editor to test and run you local code on it.)
+```
+
+
 
 **Windows:**
 ```cmd
