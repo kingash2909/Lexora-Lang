@@ -22,7 +22,7 @@ if age >= 18:
 ```
 
 ### With Lexora:
-```lexora
+```python
 Display "Hello, ", name
 If age is greater than or equal to 18:
     Display "Adult"
