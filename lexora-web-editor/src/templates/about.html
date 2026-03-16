@@ -1,0 +1,1153 @@
+{% extends "base.html" %}
+
+{% block title %}About Lexora - The Future of Programming{% endblock %}
+
+{% block content %}
+<div class="about-page">
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <h1>About <span class="highlight-gradient">Lexora</span></h1>
+            <p class="about-subtitle">Revolutionizing programming through natural language</p>
+        </section>
+
+        <!-- Tab Navigation -->
+        <div class="about-tabs">
+            <button class="tab-btn active" onclick="showTab('overview')">Overview</button>
+            <button class="tab-btn" onclick="showTab('features')">Features</button>
+            <button class="tab-btn" onclick="showTab('installation')">Installation</button>
+            <button class="tab-btn" onclick="showTab('packaging')">Packaging</button>
+            <button class="tab-btn" onclick="showTab('team')">Team</button>
+            <button class="tab-btn" onclick="showTab('license')">License</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="about-content">
+            
+            <!-- Overview Tab -->
+            <div id="overview" class="tab-content active">
+                <div class="info-card">
+                    <h2><span class="icon">🚀</span> What is Lexora?</h2>
+                    <p>Lexora 1.0 Ultimate Edition is a revolutionary programming language that bridges the gap between human language and machine execution. It allows you to write code in plain English, making programming accessible to everyone.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">English Syntax</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">0</span>
+                            <span class="stat-label">Syntax Barriers</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Possibilities</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">1.0</span>
+                            <span class="stat-label">Current Version</span>
+                        </div>
+                    </div>
+
+                    <div class="mission-section">
+                        <h3>Our Mission</h3>
+                        <p>To make programming as natural as human conversation, removing barriers and empowering anyone to create software.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h2><span class="icon">📖</span> Language Philosophy</h2>
+                    <ul class="philosophy-list">
+                        <li>
+                            <strong>Natural First:</strong> Code should read like human language
+                        </li>
+                        <li>
+                            <strong>Accessibility:</strong> Programming for everyone, not just experts
+                        </li>
+                        <li>
+                            <strong>Power & Simplicity:</strong> Advanced features without complexity
+                        </li>
+                        <li>
+                            <strong>Education Focused:</strong> Perfect for learning programming concepts
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Features Tab -->
+            <div id="features" class="tab-content">
+                <div class="info-card">
+                    <h2><span class="icon">⚡</span> Core Features</h2>
+                    <div class="features-detailed-grid">
+                        <div class="feature-detail">
+                            <h3>Natural Language Syntax</h3>
+                            <p>Write code using English keywords like Display, Set, If, Repeat, Define, etc.</p>
+                            <div class="code-preview">
+                                <pre>Display "Hello, World!"
+Set name to "Developer"
+Display "Welcome, ", name</pre>
+                            </div>
+                        </div>
+
+                        <div class="feature-detail">
+                            <h3>Object-Oriented Programming</h3>
+                            <p>Full support for Classes, Inheritance, Interfaces, and Abstract methods</p>
+                            <div class="code-preview">
+                                <pre>Class Animal:
+    Define speak as:
+        Display "Sound"
+    End
+End
+
+Class Dog inherits Animal
+End</pre>
+                            </div>
+                        </div>
+
+                        <div class="feature-detail">
+                            <h3>Error Handling</h3>
+                            <p>Production-ready error management with Try-Catch-Finally blocks</p>
+                            <div class="code-preview">
+                                <pre>Try:
+    Write "data.txt", "Hello"
+Catch:
+    Display last_error
+End</pre>
+                            </div>
+                        </div>
+
+                        <div class="feature-detail">
+                            <h3>File & Network I/O</h3>
+                            <p>Read/write files, make HTTP requests, handle data</p>
+                            <div class="code-preview">
+                                <pre>Read "input.txt"
+Write "output.txt", result
+HTTP GET "https://api.example.com"</pre>
+                            </div>
+                        </div>
+
+                        <div class="feature-detail">
+                            <h3>Concurrency & Async</h3>
+                            <p>Multi-threading, locks, and async operations</p>
+                            <div class="code-preview">
+                                <pre>Create Lock "mylock"
+Acquire "mylock"
+# Critical section
+Release "mylock"</pre>
+                            </div>
+                        </div>
+
+                        <div class="feature-detail">
+                            <h3>Web-Based IDE</h3>
+                            <p>Beautiful, modern editor with syntax highlighting and instant execution</p>
+                            <div class="ide-screenshot">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect fill='%231a1a2e' width='800' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236366f1' font-size='24'%3EIDE Preview%3C/text%3E%3C/svg%3E" alt="IDE Preview">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Tab -->
+            <div id="installation" class="tab-content">
+                <div class="info-card">
+                    <h2><span class="icon">📥</span> Installation Guide</h2>
+                    <p class="install-intro">Choose your platform and follow the simple steps below</p>
+
+                    <!-- Platform Tabs -->
+                    <div class="platform-tabs">
+                        <button class="platform-tab active" onclick="showPlatform('windows')">Windows</button>
+                        <button class="platform-tab" onclick="showPlatform('macos')">macOS</button>
+                        <button class="platform-tab" onclick="showPlatform('linux')">Linux</button>
+                        <button class="platform-tab" onclick="showPlatform('source')">From Source</button>
+                    </div>
+
+                    <!-- Pip Installation -->
+                    <div id="pip" class="platform-content active">
+                        <h3>Install via pip (Recommended)</h3>
+                        <div class="install-steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h4>Install Python</h4>
+                                    <p>Make sure Python 3.8+ is installed</p>
+                                    <div class="command-box">python --version</div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h4>Install Lexora</h4>
+                                    <p>One command installation</p>
+                                    <div class="command-box">pip install lexora-lang</div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h4>Run the Editor</h4>
+                                    <p>Start the web-based IDE</p>
+                                    <div class="command-box">lexora-editor</div>
+                                    <p class="step-note">Browser will open automatically at http://localhost:5001</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- macOS Installation -->
+                    <div id="macos" class="platform-content">
+                        <h3>macOS Standalone Application</h3>
+                        <p class="install-intro">Completely independent - no Python or Homebrew needed!</p>
+                        
+                        <div class="install-methods">
+                            <div class="method">
+                                <h4>🍎 Method 1: DMG Installer (Recommended)</h4>
+                                <ol>
+                                    <li>Download <strong>Lexora-1.0.0-macOS.dmg</strong></li>
+                                    <li>Open the DMG file</li>
+                                    <li>Drag Lexora.app to Applications folder</li>
+                                    <li>Open Terminal</li>
+                                    <li>Add to PATH (one-time setup):</li>
+                                </ol>
+                                <div class="command-box"># Add this to your ~/.zshrc or ~/.bash_profile:
+export PATH="/Applications/Lexora.app/Contents/MacOS:$PATH"
+
+# Then reload:
+source ~/.zshrc
+
+# Now you can use:
+lexora hello.lx
+lexora-editor</div>
+                            </div>
+
+                            <div class="method">
+                                <h4>📦 Method 2: PKG Package</h4>
+                                <ol>
+                                    <li>Download <strong>Lexora-1.0.0.pkg</strong></li>
+                                    <li>Double-click to install</li>
+                                    <li>Installs to /usr/local/bin automatically</li>
+                                    <li>Ready to use in any terminal</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="system-requirements">
+                            <h4>System Requirements</h4>
+                            <ul>
+                                <li>macOS 10.13 (High Sierra) or later</li>
+                                <li>Intel or Apple Silicon (M1/M2/M3)</li>
+                                <li>No Python or Homebrew required!</li>
+                                <li>512 MB RAM</li>
+                                <li>100 MB disk space</li>
+                            </ul>
+                        </div>
+
+                        <div class="quick-start">
+                            <h4>Quick Start After Installation</h4>
+                            <div class="command-box"># Open Terminal and type:
+lexora --help
+
+# Run your first program:
+echo 'Display "Hello, World!"' > hello.lx
+lexora hello.lx
+
+# Launch web editor:
+lexora-editor
+
+# Or open Lexora.app from Applications</div>
+                        </div>
+                    </div>
+
+                    <!-- Windows Installation -->
+                    <div id="windows" class="platform-content active">
+                        <h3>Windows Standalone Installer</h3>
+                        <p class="install-intro">No Python required! Our installer includes everything you need.</p>
+                        
+                        <div class="install-methods">
+                            <div class="method">
+                                <h4>📦 Method 1: EXE Installer (Recommended)</h4>
+                                <ol>
+                                    <li>Download <strong>Lexora-1.0.0-Windows.exe</strong> from GitHub Releases</li>
+                                    <li>Double-click to run installer</li>
+                                    <li>Click "Next" through the wizard</li>
+                                    <li>Installer adds Lexora to your PATH automatically</li>
+                                    <li>Open Command Prompt or PowerShell</li>
+                                    <li>Type: <code>lexora</code></li>
+                                </ol>
+                                <div class="command-box">lexora hello.lx</div>
+                            </div>
+
+                            <div class="method">
+                                <h4>💾 Method 2: Portable ZIP</h4>
+                                <ol>
+                                    <li>Download <strong>Lexora-1.0.0-Windows.zip</strong></li>
+                                    <li>Extract to any folder (e.g., C:\Program Files\Lexora)</li>
+                                    <li>Add folder to system PATH (optional)</li>
+                                    <li>Run <code>lexora.bat</code> from the folder</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="system-requirements">
+                            <h4>System Requirements</h4>
+                            <ul>
+                                <li>Windows 10 or later (64-bit)</li>
+                                <li>No Python installation needed!</li>
+                                <li>512 MB RAM</li>
+                                <li>100 MB disk space</li>
+                                <li>.NET Framework 4.7+ (usually pre-installed)</li>
+                            </ul>
+                        </div>
+
+                        <div class="quick-start">
+                            <h4>Quick Start After Installation</h4>
+                            <div class="command-box">REM Open Command Prompt and type:
+lexora --help
+
+REM Run your first program:
+echo Display "Hello, World!" > hello.lx
+lexora hello.lx
+
+REM Launch web editor:
+lexora-editor</div>
+                        </div>
+                    </div>
+
+                    <!-- Linux Installation -->
+                    <div id="linux" class="platform-content">
+                        <h3>Linux Standalone Binary</h3>
+                        <p class="install-intro">Works on any distribution - no package manager needed!</p>
+                        
+                        <div class="install-methods">
+                            <div class="method">
+                                <h4>🐧 Method 1: DEB Package (Debian/Ubuntu)</h4>
+                                <ol>
+                                    <li>Download <strong>lexora_1.0.0_amd64.deb</strong></li>
+                                    <li>Install with one command:</li>
+                                </ol>
+                                <div class="command-box">sudo dpkg -i lexora_1.0.0_amd64.deb</div>
+                                <ol start="3">
+                                    <li>Ready to use system-wide!</li>
+                                </ol>
+                                <div class="command-box">lexora hello.lx
+lexora-editor</div>
+                            </div>
+
+                            <div class="method">
+                                <h4>📦 Method 2: Universal Binary (All Distros)</h4>
+                                <ol>
+                                    <li>Download <strong>Lexora-1.0.0-Linux.tar.gz</strong></li>
+                                    <li>Extract to /opt:</li>
+                                </ol>
+                                <div class="command-box">sudo tar -xzf Lexora-1.0.0-Linux.tar.gz -C /opt/</div>
+                                <ol start="3">
+                                    <li>Create symlinks:</li>
+                                </ol>
+                                <div class="command-box">sudo ln -s /opt/lexora/lexora /usr/local/bin/lexora
+sudo ln -s /opt/lexora/lexora-editor /usr/local/bin/lexora-editor</div>
+                                <ol start="4">
+                                    <li>Use anywhere!</li>
+                                </ol>
+                            </div>
+
+                            <div class="method">
+                                <h4>⚡ Method 3: AppImage (Coming Soon)</h4>
+                                <ol>
+                                    <li>Download <strong>Lexora-1.0.0-x86_64.AppImage</strong></li>
+                                    <li>Make executable:</li>
+                                </ol>
+                                <div class="command-box">chmod +x Lexora-1.0.0-x86_64.AppImage
+./Lexora-1.0.0-x86_64.AppImage</div>
+                            </div>
+                        </div>
+
+                        <div class="system-requirements">
+                            <h4>System Requirements</h4>
+                            <ul>
+                                <li>Any modern Linux distribution</li>
+                                <li>Ubuntu 18.04+, Debian 10+, Fedora 30+, Arch, etc.</li>
+                                <li>No Python or dependencies required!</li>
+                                <li>glibc 2.17 or later</li>
+                                <li>512 MB RAM</li>
+                                <li>100 MB disk space</li>
+                            </ul>
+                        </div>
+
+                        <div class="quick-start">
+                            <h4>Quick Start After Installation</h4>
+                            <div class="command-box"># Open terminal and type:
+lexora --help
+
+# Run your first program:
+echo 'Display "Hello, World!"' > hello.lx
+lexora hello.lx
+
+# Launch web editor:
+lexora-editor &</div>
+                        </div>
+                    </div>
+
+                    <!-- From Source Installation -->
+                    <div id="source" class="platform-content">
+                        <h3>Build from Source</h3>
+                        <p class="install-intro">For developers who want to contribute or customize</p>
+                        
+                        <div class="install-methods">
+                            <div class="method">
+                                <h4>🔧 Prerequisites</h4>
+                                <ul>
+                                    <li>Python 3.8+ (for building only)</li>
+                                    <li>Git</li>
+                                    <li>PyInstaller (for building standalone binaries)</li>
+                                </ul>
+                            </div>
+
+                            <div class="method">
+                                <h4>📥 Clone Repository</h4>
+                                <div class="command-box">git clone https://github.com/yourusername/lexora.git
+cd lexora</div>
+                            </div>
+
+                            <div class="method">
+                                <h4>🏗️ Build Standalone Binaries</h4>
+                                <div class="command-box"># Install build dependency
+pip install pyinstaller
+
+# Build standalone executables
+python build_standalone.py</div>
+                                <p>This creates platform-specific installers in the <code>dist/</code> folder that don't require Python!</p>
+                            </div>
+
+                            <div class="method">
+                                <h4>🧪 Test Without Building</h4>
+                                <div class="command-box"># For development/testing only
+python lexora-web-editor/src/lexora/lexora.py hello.lx
+python lexora-web-editor/src/app.py</div>
+                            </div>
+                        </div>
+
+                        <div class="contributing">
+                            <h4>Contributing</h4>
+                            <p>We welcome contributions! Please see our <a href="https://github.com/yourusername/lexora/blob/main/CONTRIBUTING.md" target="_blank">Contributing Guide</a> for details.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Packaging Tab -->
+            <div id="packaging" class="tab-content">
+                <div class="info-card">
+                    <h2><span class="icon">📦</span> Package Information</h2>
+                    
+                    <div class="package-details">
+                        <div class="detail-row">
+                            <span class="label">Package Name:</span>
+                            <span class="value">lexora-lang</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Version:</span>
+                            <span class="value">1.0.0</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Author:</span>
+                            <span class="value">Ashish Mishra</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">License:</span>
+                            <span class="value">MIT License</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Python Version:</span>
+                            <span class="value">3.8+</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Platforms:</span>
+                            <span class="value">Windows, macOS, Linux</span>
+                        </div>
+                    </div>
+
+                    <h3>Distribution Formats</h3>
+                    <div class="formats-grid">
+                        <div class="format-card">
+                            <h4>Source Distribution</h4>
+                            <p>.tar.gz archive with complete source code</p>
+                        </div>
+                        <div class="format-card">
+                            <h4>Wheel Package</h4>
+                            <p>.whl binary distribution for quick installation</p>
+                        </div>
+                        <div class="format-card">
+                            <h4>Standalone Executable</h4>
+                            <p>Self-contained application (no Python needed)</p>
+                        </div>
+                        <div class="format-card">
+                            <h4>Platform Installers</h4>
+                            <p>.exe (Windows), .dmg (macOS), .deb (Linux)</p>
+                        </div>
+                    </div>
+
+                    <h3>Build from Source</h3>
+                    <div class="code-block">
+                        <pre># Clone repository
+git clone https://github.com/yourusername/lexora.git
+cd lexora
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install in development mode
+pip install -e .
+
+# Build distribution
+python build.py</pre>
+                    </div>
+
+                    <h3>Dependencies</h3>
+                    <div class="dependencies-list">
+                        <div class="dependency">
+                            <span class="dep-name">Flask</span>
+                            <span class="dep-version">≥2.2.2</span>
+                            <span class="dep-purpose">Web framework</span>
+                        </div>
+                        <div class="dependency">
+                            <span class="dep-name">Werkzeug</span>
+                            <span class="dep-version">≥2.2.2</span>
+                            <span class="dep-purpose">WSGI utilities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Tab -->
+            <div id="team" class="tab-content">
+                <div class="info-card">
+                    <h2><span class="icon">👥</span> Our Team</h2>
+                    <p class="team-intro">Built with ❤️ by developers who believe programming should be human-friendly</p>
+
+                    <div class="team-values">
+                        <div class="value-card">
+                            <h3>🎯 Mission</h3>
+                            <p>Democratize programming by making it accessible in natural language</p>
+                        </div>
+                        <div class="value-card">
+                            <h3>🌟 Vision</h3>
+                            <p>A world where anyone can code, regardless of technical background</p>
+                        </div>
+                        <div class="value-card">
+                            <h3>💡 Values</h3>
+                            <ul>
+                                <li>Accessibility over complexity</li>
+                                <li>Education first</li>
+                                <li>Community driven</li>
+                                <li>Open source forever</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="community-section">
+                        <h3>Join Our Community</h3>
+                        <div class="community-links">
+                            <a href="#" class="community-link">
+                                <span class="link-icon">🐙</span>
+                                <span class="link-text">GitHub</span>
+                                <span class="link-desc">Source code & issues</span>
+                            </a>
+                            <a href="#" class="community-link">
+                                <span class="link-icon">💬</span>
+                                <span class="link-text">Discord</span>
+                                <span class="link-desc">Community chat</span>
+                            </a>
+                            <a href="#" class="community-link">
+                                <span class="link-icon">🐦</span>
+                                <span class="link-text">Twitter/X</span>
+                                <span class="link-desc">Updates & news</span>
+                            </a>
+                            <a href="#" class="community-link">
+                                <span class="link-icon">📧</span>
+                                <span class="link-text">Email</span>
+                                <span class="link-desc">support@lexora.dev</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- License Tab -->
+            <div id="license" class="tab-content">
+                <div class="info-card">
+                    <h2><span class="icon">📄</span> License</h2>
+                    
+                    <div class="license-badge">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%234CAF50' cx='50' cy='50' r='45'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='14' font-weight='bold'%3EMIT%3C/text%3E%3C/svg%3E" alt="MIT License">
+                    </div>
+
+                    <h3>MIT License</h3>
+                    <p class="license-intro">This is a permissive license that is short and to the point. It lets people do anything with your code with proper attribution and without warranty.</p>
+
+                    <div class="license-permissions">
+                        <h4>You are free to:</h4>
+                        <ul>
+                            <li><strong>✓ Share</strong> — copy and redistribute the material in any medium or format</li>
+                            <li><strong>✓ Adapt</strong> — remix, transform, and build upon the material for any purpose</li>
+                            <li><strong>✓ Commercial Use</strong> — use this software for commercial purposes</li>
+                            <li><strong>✓ Private Use</strong> — use this software privately without restrictions</li>
+                        </ul>
+                    </div>
+
+                    <div class="license-conditions">
+                        <h4>Under the following terms:</h4>
+                        <ul>
+                            <li><strong>Attribution</strong> — You must give appropriate credit, provide a link to the license, and indicate if changes were made</li>
+                            <li><strong>No Additional Restrictions</strong> — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits</li>
+                        </ul>
+                    </div>
+
+                    <div class="license-disclaimer">
+                        <h4>Disclaimer</h4>
+                        <p>The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability.</p>
+                    </div>
+
+                    <div class="license-links">
+                        <a href="https://opensource.org/licenses/MIT" target="_blank" class="btn-primary">
+                            Read Full License
+                        </a>
+                        <a href="https://github.com/yourusername/lexora/blob/main/LICENSE" target="_blank" class="btn-secondary">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+.about-page {
+    padding-top: calc(var(--nav-height) + 40px);
+    min-height: 100vh;
+    background: var(--bg-pure);
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.about-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-mid);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-mid);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border-radius: 8px 8px 0 0;
+}
+
+.tab-btn:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+}
+
+.tab-btn.active {
+    background: var(--accent);
+    color: #000;
+}
+
+.about-content {
+    max-width: 1200px;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.info-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.icon {
+    font-size: 1.75rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-low);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.mission-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+}
+
+.philosophy-list {
+    list-style: none;
+    padding: 0;
+}
+
+.philosophy-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.philosophy-list li:last-child {
+    border-bottom: none;
+}
+
+.features-detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-detail {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.feature-detail h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+}
+
+.code-preview {
+    margin-top: 1rem;
+    background: rgba(15, 10, 30, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.code-preview pre {
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--text-mid);
+}
+
+.platform-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.platform-tab {
+    padding: 0.5rem 1rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.platform-tab:hover,
+.platform-tab.active {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+}
+
+.platform-content {
+    display: none;
+}
+
+.platform-content.active {
+    display: block;
+}
+
+.install-steps {
+    margin-top: 2rem;
+}
+
+.step {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    color: #000;
+    font-weight: 800;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.command-box {
+    background: rgba(15, 10, 30, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    color: var(--text-mid);
+    margin: 0.75rem 0;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.step-note {
+    font-size: 0.875rem;
+    color: var(--text-low);
+    margin-top: 0.5rem;
+}
+
+.package-details {
+    margin: 2rem 0;
+}
+
+.detail-row {
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: 600;
+    color: var(--text-mid);
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.value {
+    color: var(--text-primary);
+}
+
+.formats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.format-card {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.format-card h4 {
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.dependencies-list {
+    margin-top: 1.5rem;
+}
+
+.dependency {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.dep-name {
+    font-weight: 600;
+    color: var(--accent);
+    min-width: 120px;
+}
+
+.dep-version {
+    color: var(--text-mid);
+}
+
+.dep-purpose {
+    color: var(--text-low);
+    margin-left: auto;
+}
+
+.team-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.value-card {
+    padding: 2rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.value-card h3 {
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.community-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.community-link {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.community-link:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.link-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.link-text {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.link-desc {
+    font-size: 0.875rem;
+    color: var(--text-low);
+}
+
+.license-badge {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.license-badge img {
+    width: 120px;
+    height: 120px;
+}
+
+.license-permissions,
+.license-conditions,
+.license-disclaimer {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.license-permissions h4,
+.license-conditions h4,
+.license-disclaimer h4 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.license-permissions ul,
+.license-conditions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.license-permissions li,
+.license-conditions li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.license-permissions li:last-child,
+.license-conditions li:last-child {
+    border-bottom: none;
+}
+
+.license-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .about-tabs {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    
+    .stats-grid,
+    .features-detailed-grid,
+    .formats-grid,
+    .team-values,
+    .community-links {
+        grid-template-columns: 1fr;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .label {
+        width: auto;
+    }
+    
+    .step {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .license-links {
+        flex-direction: column;
+    }
+}
+</style>
+
+<script>
+function showTab(tabName) {
+    // Hide all tab contents
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    // Remove active class from all buttons
+    const tabButtons = document.querySelectorAll('.about-tabs .tab-btn');
+    tabButtons.forEach(button => {
+        button.classList.remove('active');
+    });
+    
+    // Show selected tab
+    const selectedContent = document.getElementById(tabName);
+    if (selectedContent) {
+        selectedContent.classList.add('active');
+    }
+    
+    // Add active class to clicked button
+    event.target.classList.add('active');
+}
+
+function showPlatform(platformName) {
+    // Hide all platform contents
+    const platformContents = document.querySelectorAll('.platform-content');
+    platformContents.forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    // Remove active class from all platform tabs
+    const platformTabs = document.querySelectorAll('.platform-tab');
+    platformTabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Show selected platform
+    const selectedContent = document.getElementById(platformName);
+    if (selectedContent) {
+        selectedContent.classList.add('active');
+    }
+    
+    // Add active class to clicked button
+    event.target.classList.add('active');
+}
+</script>
+{% endblock %}

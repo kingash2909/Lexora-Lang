@@ -1,0 +1,547 @@
+{% extends "base.html" %}
+
+{% block title %}Lexora Docs - The Standard{% endblock %}
+
+{% block content %}
+<div class="docs-page">
+    <div class="container docs-container">
+        <aside class="docs-sidebar">
+            <div class="sidebar-section">
+                <h3>Core</h3>
+                <nav class="docs-nav">
+                    <a href="#intro" class="active">Introduction</a>
+                    <a href="#variables">Variables</a>
+                    <a href="#io">I/O</a>
+                    <a href="#comments">Comments</a>
+                </nav>
+            </div>
+            <div class="sidebar-section">
+                <h3>Flow Control</h3>
+                <nav class="docs-nav">
+                    <a href="#logic">If / Else If / Else</a>
+                    <a href="#switch">Switch / Case</a>
+                    <a href="#loops">Loops (Repeat/For/While)</a>
+                    <a href="#functions">Functions & Return</a>
+                    <a href="#lambdas">Lambda Functions</a>
+                </nav>
+            </div>
+            <div class="sidebar-section">
+                <h3>Data Structures</h3>
+                <nav class="docs-nav">
+                    <a href="#lists">Lists & Methods</a>
+                    <a href="#dicts">Dictionaries</a>
+                    <a href="#sets">Sets & Collections</a>
+                    <a href="#strings">String Methods</a>
+                </nav>
+            </div>
+            <div class="sidebar-section">
+                <h3>Lexora 1.0 (Ultimate)</h3>
+                <nav class="docs-nav">
+                    <a href="#constants">Constants & Types</a>
+                    <a href="#bitwise">Bitwise & Logic</a>
+                    <a href="#oop">OOP & Constructors</a>
+                    <a href="#advanced-oop">Interfaces & Abstract</a>
+                    <a href="#modules">Modules (Import)</a>
+                    <a href="#concurrency">Concurrency & Locks</a>
+                    <a href="#network">Network & Time</a>
+                    <a href="#tooling">Lint & Format</a>
+                </nav>
+            </div>
+            <div class="sidebar-section">
+                <h3>Error Handling</h3>
+                <nav class="docs-nav">
+                    <a href="#try-catch">Try-Catch-Finally</a>
+                    <a href="#raise">Raise Errors</a>
+                </nav>
+            </div>
+            <div class="sidebar-section">
+                <h3>Utilities</h3>
+                <nav class="docs-nav">
+                    <a href="#math">Math Functions</a>
+                    <a href="#string">String Ops</a>
+                    <a href="#file">File I/O</a>
+                    <a href="#type">Type Checking</a>
+                </nav>
+            </div>
+        </aside>
+        
+        <main class="docs-content">
+            <section id="intro" class="docs-section">
+                <h1>Lexora 1.0 Ultimate Edition</h1>
+                <p>Lexora 1.0 is the definitive natural language programming environment. It bridges the gap between human language and machine execution with a massive feature set covering everything from bitwise manipulation to asynchronous network requests.</p>
+                <div class="code-example">
+                    Display "Lexora 1.0 Ultimate is Active"
+                </div>
+            </section>
+
+            <section id="variables" class="docs-section">
+                <h2>Variables</h2>
+                <p>Use <code>Set</code> to create or update variables. Lexora supports numbers, strings, lists, and dictionaries.</p>
+                <div class="code-example">
+                    Set name to "Lexora"<br>
+                    Set version to 7.0<br>
+                    Set is_active to True
+                </div>
+            </section>
+
+            <section id="io" class="docs-section">
+                <h2>Input/Output</h2>
+                <p>Display output with <code>Display</code> and get user input with <code>Get</code>.</p>
+                <div class="code-example">
+                    Display "Enter your name:"<br>
+                    Get user_name<br>
+                    Display "Hello, ", user_name
+                </div>
+            </section>
+
+            <section id="comments" class="docs-section">
+                <h2>Comments</h2>
+                <p>Use <code>#</code> for single-line comments. For multi-line comments, use <code>/* ... */</code>. Comments are ignored during execution.</p>
+                <div class="code-example">
+                    # This is a comment<br>
+                    Set x to 10 # Inline comment also works<br><br>
+                    /* This is a<br>
+                    multi-line comment */<br>
+                    Display "Hello" # Only this executes
+                </div>
+            </section>
+
+            <section id="logic" class="docs-section">
+                <h2>If / Else If / Else</h2>
+                <p>Control flow with multi-branch logic blocks. Every block must end with <code>End</code>.</p>
+                <div class="code-example">
+                    If score is greater than 90:<br>
+                    &nbsp;&nbsp;Display "Grade: A"<br>
+                    Else If score is greater than 70:<br>
+                    &nbsp;&nbsp;Display "Grade: B"<br>
+                    Else:<br>
+                    &nbsp;&nbsp;Display "Grade: C"<br>
+                    End
+                </div>
+            </section>
+
+            <section id="switch" class="docs-section">
+                <h2>Switch / Case</h2>
+                <p>Alternative control flow for multiple discrete values.</p>
+                <div class="code-example">
+                    Switch status:<br>
+                    &nbsp;&nbsp;Case "Active":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Display "User is online"<br>
+                    &nbsp;&nbsp;Case "Idle":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Display "User is away"<br>
+                    &nbsp;&nbsp;Default:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Display "Unknown status"<br>
+                    End
+                </div>
+            </section>
+
+            <section id="loops" class="docs-section">
+                <h2>Loops</h2>
+                <p>Lexora provides three types of loops for different scenarios, including Do-While.</p>
+                <div class="code-example">
+                    # Repeat loop<br>
+                    Repeat 3 times:<br>
+                    &nbsp;&nbsp;Display "Hello"<br>
+                    End<br><br>
+                    # Do-While loop<br>
+                    Do:<br>
+                    &nbsp;&nbsp;Increment counter<br>
+                    While counter is less than 5:<br>
+                    End<br><br>
+                    # Break and Continue<br>
+                    For i from 1 to 10:<br>
+                    &nbsp;&nbsp;If i equals 5:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Continue # Skip 5<br>
+                    &nbsp;&nbsp;End<br>
+                    &nbsp;&nbsp;If i equals 8:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Break # Stop at 8<br>
+                    &nbsp;&nbsp;End<br>
+                    &nbsp;&nbsp;Display i<br>
+                    End
+                </div>
+            </section>
+
+            <section id="functions" class="docs-section">
+                <h2>Functions & Return</h2>
+                <p>Functions now support parameters and return values. Variables inside functions are local to that function call.</p>
+                <div class="code-example">
+                    Define calculate_area with width, height as:<br>
+                    &nbsp;&nbsp;Set area to width * height<br>
+                    &nbsp;&nbsp;Return area<br>
+                    End<br><br>
+                    Set result to Call calculate_area with 10, 20<br>
+                    Display "Area is: ", result
+                </div>
+            </section>
+
+            <section id="lambdas" class="docs-section">
+                <h2>Lambda Functions</h2>
+                <p>Inline, anonymous function definitions for quick operations.</p>
+                <div class="code-example">
+                    Set square to Lambda(x): x * x<br>
+                    Call square with 5 # Displays 25
+                </div>
+            </section>
+
+            <section id="lists" class="docs-section">
+                <h2>Lists & Methods</h2>
+                <p>Manage ordered collections of data.</p>
+                <div class="code-example">
+                    Set items to ["Apple", "Banana"]<br>
+                    Append "Cherry" to items<br>
+                    Remove from items at index 1<br>
+                    Length of items # Prints the size
+                </div>
+            </section>
+
+            <section id="sets" class="docs-section">
+                <h2>Sets & Collections</h2>
+                <p>Manage unique collections of data.</p>
+                <div class="code-example">
+                    Set my_set to Set from [1, 2, 2, 3]<br>
+                    Display my_set # Displays {1, 2, 3}
+                </div>
+            </section>
+
+            <section id="strings" class="docs-section">
+                <h2>String Methods</h2>
+                <p>Built-in commands for string manipulation.</p>
+                <div class="code-example">
+                    Set text to "lexora lang"<br>
+                    Uppercase text # Prints LEXORA LANG<br>
+                    Lowercase text # Prints lexora lang<br><br>
+                    # Advanced string operations<br>
+                    Set sentence to "Hello,World,Welcome"<br>
+                    Split sentence by "," into words<br>
+                    Display words # ["Hello", "World", "Welcome"]<br><br>
+                    Set msg to "Hello World"<br>
+                    Replace "World" with "Lexora" in msg<br>
+                    Display msg # "Hello Lexora"
+                </div>
+            </section>
+
+            <section id="constants" class="docs-section">
+                <h2>Constants & Type Casting</h2>
+                <p>Ensure immutability and explicit type management.</p>
+                <div class="code-example">
+                    Constant PI as 3.14159<br>
+                    Set count to Number from "10"<br>
+                    Set c to Character from 65 # Displays 'A'<br>
+                    Set b to Byte from 255<br><br>
+                    # Type checking<br>
+                    Set type_info to Type of count<br>
+                    Display type_info # Shows "int"<br><br>
+                    If count is instance of int:<br>
+                    &nbsp;&nbsp;Display "count is an integer"<br>
+                    End
+                </div>
+            </section>
+
+            <section id="bitwise" class="docs-section">
+                <h2>Bitwise & Advanced Logic</h2>
+                <p>Direct bit manipulation and complex boolean operations.</p>
+                <div class="code-example">
+                    If x bit and y is not 0:<br>
+                    &nbsp;&nbsp;Set result to x shift left 2<br>
+                    End<br><br>
+                    If status is "Active" or maybe count is greater than 100:<br>
+                    &nbsp;&nbsp;Display "Condition Met"<br>
+                    End
+                </div>
+            </section>
+
+            <section id="oop" class="docs-section">
+                <h2>OOP & Constructors</h2>
+                <p>Support for classes, inheritance, and constructors.</p>
+                <div class="code-example">
+                    Class User:<br>
+                    &nbsp;&nbsp;Define Initialize with name as:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Set self.name to name<br>
+                    &nbsp;&nbsp;End<br>
+                    End<br><br>
+                    Set player to New User<br>
+                    Call player.Initialize with "Ashish"
+                </div>
+            </section>
+
+            <section id="data-v7" class="docs-section">
+                <h2>Data Mastery (Filter/Map/Reduce)</h2>
+                <p>Professional data manipulation tools.</p>
+                <div class="code-example">
+                    Set scores to [10, 50, 30, 80]<br>
+                    Filter scores where "item > 40" into high_scores<br>
+                    Map high_scores using "item * 2" into doubled_scores<br>
+                    Reduce doubled_scores using "acc + item" into total starting with 0
+                </div>
+            </section>
+
+            <section id="advanced-oop" class="docs-section">
+                <h2>Interfaces & Abstract Classes</h2>
+                <p>Define strict contracts for your objects using Interfaces and Abstract Classes.</p>
+                <div class="code-example">
+                    Interface Shape:<br>
+                    &nbsp;&nbsp;Define GetArea as:<br>
+                    &nbsp;&nbsp;End<br>
+                    End<br><br>
+                    Abstract Class Drawable:<br>
+                    &nbsp;&nbsp;Define Draw as:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Display "Drawing..."<br>
+                    &nbsp;&nbsp;End<br>
+                    End<br><br>
+                    Class Circle inherits Drawable:<br>
+                    &nbsp;&nbsp;Define GetArea as:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Return 3.14 * self.radius * self.radius<br>
+                    &nbsp;&nbsp;End<br>
+                    End
+                </div>
+            </section>
+
+            <section id="modules" class="docs-section">
+                <h2>Modules (Import)</h2>
+                <p>Organize your code across multiple files. Use <code>Import</code> to load another <code>.lx</code> file.</p>
+                <div class="code-example">
+                    Import my_library<br>
+                    Set result to Call some_function from_library
+                </div>
+            </section>
+
+            <section id="try-catch" class="docs-section">
+                <h2>Try-Catch-Finally</h2>
+                <p>Handle errors gracefully with exception handling.</p>
+                <div class="code-example">
+                    Try:<br>
+                    &nbsp;&nbsp;Raise "Something went wrong"<br>
+                    Catch:<br>
+                    &nbsp;&nbsp;Display "Error caught: ", last_error<br>
+                    Finally:<br>
+                    &nbsp;&nbsp;Display "This always executes"<br>
+                    End
+                </div>
+            </section>
+
+            <section id="raise" class="docs-section">
+                <h2>Raise Errors</h2>
+                <p>Manually trigger exceptions for validation.</p>
+                <div class="code-example">
+                    If age is less than 0:<br>
+                    &nbsp;&nbsp;Raise "Age cannot be negative"<br>
+                    End
+                </div>
+            </section>
+
+            <section id="math" class="docs-section">
+                <h2>Mathematical Functions</h2>
+                <p>Advanced mathematical operations.</p>
+                <div class="code-example">
+                    # Trigonometry<br>
+                    Set result to Sin of 30<br>
+                    Set result to Cos of 45<br>
+                    Set result to Tan of 60<br><br>
+                    # Power & Roots<br>
+                    Power 2 to the power of 8 # 256<br>
+                    SquareRoot 144 # 12<br><br>
+                    # Rounding<br>
+                    Set val to 3.14159<br>
+                    Round val # 3<br>
+                    Set abs_val to Absolute of -10 # 10
+                </div>
+            </section>
+
+            <section id="string" class="docs-section">
+                <h2>String Operations</h2>
+                <p>Advanced string manipulation beyond basic methods.</p>
+                <div class="code-example">
+                    # Split and Join<br>
+                    Set csv to "apple,banana,cherry"<br>
+                    Split csv by "," into fruits<br>
+                    Display Length of fruits # 3<br><br>
+                    # Join list into string<br>
+                    Join fruits with " - "<br>
+                    # Outputs: apple - banana - cherry<br><br>
+                    # Search<br>
+                    Search "banana" in fruits into index<br>
+                    Display index # 1
+                </div>
+            </section>
+
+            <section id="file" class="docs-section">
+                <h2>File I/O</h2>
+                <p>Read from and write to files.</p>
+                <div class="code-example">
+                    # Write to file<br>
+                    Write "data.txt", "Hello File!"<br><br>
+                    # Read from file<br>
+                    Read "data.txt"<br><br>
+                    # Append to file<br>
+                    Append to file "data.txt", "More content"<br><br>
+                    # Check if file exists<br>
+                    If file exists "data.txt":<br>
+                    &nbsp;&nbsp;Display "File found"<br>
+                    End
+                </div>
+            </section>
+
+            <section id="type" class="docs-section">
+                <h2>Type Checking</h2>
+                <p>Runtime type inspection and validation.</p>
+                <div class="code-example">
+                    Set x to 42<br>
+                    Set type_x to Type of x<br>
+                    Display type_x # "int"<br><br>
+                    If x is instance of int:<br>
+                    &nbsp;&nbsp;Display "x is an integer"<br>
+                    End<br><br>
+                    # Delete and Clear<br>
+                    Delete temp_var # Remove variable<br>
+                    Clear my_list # Empty the list
+                </div>
+            </section>
+
+            <section id="utilities" class="docs-section">
+                <h2>Utilities</h2>
+                <p>Miscellaneous useful operations.</p>
+                <div class="code-example">
+                    # Wait/Delay<br>
+                    Wait for 2 seconds<br><br>
+                    # Random numbers<br>
+                    Set rand to Random between 1 and 100<br><br>
+                    # Dictionary operations<br>
+                    Set config to {"key": "value"}<br>
+                    Keys of config # Get all keys
+                </div>
+            </section>
+
+            <section id="concurrency" class="docs-section">
+                <h2>Concurrency & Locks</h2>
+                <p>Execute logic asynchronously and protect shared resources with Locks.</p>
+                <div class="code-example">
+                    Create Lock dataLock<br>
+                    Acquire dataLock<br>
+                    # Safe operations<br>
+                    Release dataLock<br><br>
+                    Async Call background_task<br>
+                    Await
+                </div>
+            </section>
+
+            <section id="network" class="docs-section">
+                <h2>Network & Time</h2>
+                <p>Interact with the outside world and manage time.</p>
+                <div class="code-example">
+                    Network Request "https://api.example.com" into data<br>
+                    Get current time into now<br>
+                    Get current date into today
+                </div>
+            </section>
+
+            <section id="tooling" class="docs-section">
+                <h2>Lint & Format</h2>
+                <p>Lexora provides built-in tooling for code quality and style.</p>
+                <div class="code-example">
+                    Lint "my_script.lx" # Check for syntax errors<br>
+                    Format "my_script.lx" # Auto-indent your code
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+<style>
+.docs-page {
+    padding-top: calc(var(--nav-height) + 40px);
+    background: var(--bg-pure);
+    min-height: 100vh;
+}
+
+.docs-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 4rem;
+    position: relative;
+}
+
+.docs-sidebar {
+    position: sticky;
+    top: calc(var(--nav-height) + 40px);
+    height: calc(100vh - var(--nav-height) - 40px);
+    overflow-y: auto;
+    padding-right: 2rem;
+}
+
+.sidebar-section {
+    margin-bottom: 2.5rem;
+}
+
+.sidebar-section h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-low);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.docs-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.docs-nav a {
+    text-decoration: none;
+    color: var(--text-mid);
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+}
+
+.docs-nav a:hover, .docs-nav a.active {
+    color: var(--accent);
+}
+
+.docs-content {
+    max-width: 720px;
+    overflow-y: auto;
+    height: fit-content;
+}
+
+.docs-section {
+    margin-bottom: 6rem;
+}
+
+.docs-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.docs-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+.docs-section p {
+    color: var(--text-mid);
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+}
+
+.code-example {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9375rem;
+    color: #4ade80;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .docs-container {
+        grid-template-columns: 1fr;
+    }
+    .docs-sidebar {
+        display: none;
+    }
+}
+</style>
+{% endblock %}

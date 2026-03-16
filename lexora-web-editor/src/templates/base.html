@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Lexora Lang - Speak Code{% endblock %}</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="{{ url_for('index') }}" class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 40 40" class="logo-svg">
+                            <!-- Outer Circle - Represents Completeness -->
+                            <circle cx="20" cy="20" r="18" fill="none" stroke="url(#logo-gradient)" stroke-width="2.5"/>
+                            
+                            <!-- Definition Symbol (LX monogram) -->
+                            <path d="M14 28 L14 12 L26 12" fill="none" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M26 12 L20 20 L26 28" fill="none" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <!-- Speech Bubble Tail - Represents Natural Language -->
+                            <circle cx="26" cy="20" r="3" fill="var(--accent)" opacity="0.9"/>
+                            
+                            <!-- Gradient Definition -->
+                            <defs>
+                                <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-highlight">LX</span> Lexora
+                    </div>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+                <a href="{{ url_for('docs') }}" class="nav-link">Docs</a>
+                <!-- <a href="{{ url_for('about') }}" class="nav-link">Installation</a> -->
+                <a href="{{ url_for('editor') }}" class="btn-cta">Try IDE</a>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

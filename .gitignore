@@ -1,0 +1,150 @@
+# ===========================================
+# LEXORA LANGUAGE - PRODUCTION .gitignore
+# ===========================================
+# This file ensures only production-ready files are committed to GitHub
+
+# ===========================================
+# PYTHON BUILD ARTIFACTS
+# ===========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===========================================
+# VIRTUAL ENVIRONMENTS
+# ===========================================
+venv/
+ENV/
+env/
+.venv
+.env/
+.pytest_cache/
+
+# ===========================================
+# PYINSTALLER & BUILD ARTIFACTS
+# ===========================================
+*.manifest
+*.spec.bak
+*.app
+*.dmg
+*.exe
+*.msi
+*.deb
+*.rpm
+*.tar.gz
+*.whl
+build_standalone.py
+build.py
+installer.sh
+installer.bat
+install.sh
+install.bat
+
+# ===========================================
+# IDE & EDITOR FILES
+# ===========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.Thumbs.db
+.project
+.pydevproject
+.settings/
+
+# ===========================================
+# TESTING & COVERAGE
+# ===========================================
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# ===========================================
+# LOGS & TEMPORARY FILES
+# ===========================================
+*.log
+log_file
+output.txt
+tmp/
+temp/
+.tmp/
+.cache/
+
+# ===========================================
+# LOCAL CONFIGURATION
+# ===========================================
+.local
+.config
+.env.local
+.env.*.local
+*.local
+
+# ===========================================
+# TEST FILES (NOT FOR PRODUCTION)
+# ===========================================
+test_*.lx
+test_v*.lx
+temp_test.lx
+*.test
+Testing/
+MD_Files/
+
+# ===========================================
+# DOCUMENTATION GUIDES (OPTIONAL)
+# Keep these locally but not on GitHub
+# ===========================================
+*_GUIDE.md
+*_COMPLETE.md
+*_SUMMARY.md
+ABOUT_PAGE_GUIDE.md
+FILE_UPLOAD_DOWNLOAD_FEATURE.md
+HOMEPAGE_*
+INSTALLATION_COMPLETE.md
+LOGO_DESIGN_GUIDE.md
+NEWLINE_WEB_FIX.md
+PACKAGING_*
+STANDALONE_LANGUAGE.md
+QUICKSTART.md
+
+# ===========================================
+# BACKUP FILES
+# ===========================================
+*.bak
+*.backup
+*.old
+
+# ===========================================
+# OS GENERATED FILES
+# ===========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
