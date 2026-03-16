@@ -12,6 +12,8 @@
 
 Lexora is a **revolutionary programming language** that lets you write code in plain English. No cryptic syntax, no complex symbols - just logical, readable code that anyone can understand.
 
+This is build using python programming language.
+
 ### Before Lexora:
 ```python
 print(f"Hello, {name}!")
