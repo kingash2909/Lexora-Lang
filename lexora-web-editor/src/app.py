@@ -149,11 +149,12 @@ if __name__ == '__main__':
     # Get port from environment variable (for Render/Railway deployment)
     port = int(os.environ.get('PORT', 5001))
     
-    # Run on all interfaces for production compatibility
-    if os.environ.get('FLASK_ENV') == 'production':
-        app.run(debug=False, port=port, host='0.0.0.0')
-    else:
-        app.run(debug=True, port=port, host='127.0.0.1')
+    # In production/cloud environments, always bind to 0.0.0.0
+    host = '0.0.0.0' if os.environ.get('PORT') or os.environ.get('FLASK_ENV') == 'production' else '127.0.0.1'
+    debug_mode = os.environ.get('FLASK_ENV') != 'production'
+    
+    print(f"🚀 Starting Lexora Server on {host}:{port} (Debug: {debug_mode})")
+    app.run(debug=debug_mode, port=port, host=host)
 
 def run_server():
     """Entry point for lexora-editor command"""
