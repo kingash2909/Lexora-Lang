@@ -139,42 +139,20 @@ def execute():
             'error': str(e)
         })
 
-@app.route('/save', methods=['POST'])
-def save():
-    """Save code to a file"""
-    code = request.json.get('code', '')
-    filename = request.json.get('filename', 'program.lex')
-    
-    try:
-        with open(filename, 'w') as f:
-            f.write(code)
-        return jsonify({'status': 'success'})
-    except Exception as e:
-        return jsonify({
-            'status': 'error',
-            'error': str(e)
-        })
-
-@app.route('/load', methods=['POST'])
-def load():
-    """Load code from a file"""
-    filename = request.json.get('filename', '')
-    
-    try:
-        with open(filename, 'r') as f:
-            code = f.read()
-        return jsonify({
-            'status': 'success',
-            'code': code
-        })
-    except Exception as e:
-        return jsonify({
-            'status': 'error',
-            'error': str(e)
-        })
+@app.route('/health')
+def health():
+    """Health check endpoint for production monitoring"""
+    return jsonify({'status': 'healthy'})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    # Get port from environment variable (for Render/Railway deployment)
+    port = int(os.environ.get('PORT', 5001))
+    
+    # Run on all interfaces for production compatibility
+    if os.environ.get('FLASK_ENV') == 'production':
+        app.run(debug=False, port=port, host='0.0.0.0')
+    else:
+        app.run(debug=True, port=port, host='127.0.0.1')
 
 def run_server():
     """Entry point for lexora-editor command"""

@@ -54,7 +54,12 @@ Display "My list: ", fruits</textarea>
         </div>
         
         <div class="output-pane">
-            <div class="pane-label">Console</div>
+            <div class="pane-header">
+                <div class="pane-label">Console</div>
+                <button id="copy-button" class="btn-copy" title="Copy output">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
             <div id="output-area" class="output-content"></div>
         </div>
     </div>
@@ -119,6 +124,29 @@ Display "My list: ", fruits</textarea>
 
 #file-input {
     display: none;
+}
+
+.pane-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.btn-copy {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    color: var(--text-mid);
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    transition: all 0.2s;
+}
+
+.btn-copy:hover {
+    background: var(--accent);
+    color: #000;
 }
 
 .output-content {

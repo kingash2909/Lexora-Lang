@@ -38,6 +38,23 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Copy to clipboard functionality
+    const copyButton = document.getElementById("copy-button");
+    if (copyButton) {
+        copyButton.addEventListener("click", function() {
+            const text = outputArea.textContent;
+            if (text && text !== "Running...") {
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalHTML = copyButton.innerHTML;
+                    copyButton.innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(() => {
+                        copyButton.innerHTML = originalHTML;
+                    }, 2000);
+                });
+            }
+        });
+    }
+
     // Upload file functionality
     if (uploadButton && fileInput) {
         uploadButton.addEventListener("click", function() {

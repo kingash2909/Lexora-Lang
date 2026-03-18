@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: lexora-web-editor
+    env: python
+    buildCommand: pip install -r lexora-web-editor/requirements.txt
+    startCommand: cd lexora-web-editor/src && gunicorn -w 4 -b 0.0.0.0:$PORT app:app
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: PYTHON_VERSION
+        value: 3.10.0
