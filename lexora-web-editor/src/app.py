@@ -49,6 +49,7 @@ License:
 from flask import Flask, render_template, request, jsonify  # Flask web framework
 from io import StringIO  # String I/O operations
 import sys  # System-specific parameters
+import os   # Operating system interface
 from lexora.lexora import SimpleEnglishInterpreter  # Lexora interpreter
 
 # =============================================================================
