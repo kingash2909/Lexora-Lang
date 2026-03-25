@@ -266,18 +266,16 @@ lexora-editor
 - **Installation:** [INSTALLATION_COMPLETE.md](INSTALLATION_COMPLETE.md)
 - **Packaging Guide:** [PACKAGING_GUIDE.md](PACKAGING_GUIDE.md)
 - **Language Features:** [FEATURES_SUMMARY.md](FEATURES_SUMMARY.md)
-- **About Page:** http://localhost:5001/about
 
 ### External Links:
-- **Website:** https://lexora.dev
-- **Full Documentation:** https://lexora.dev/docs
-- **GitHub:** https://github.com/yourusername/lexora
-- **Discord:** https://discord.gg/lexora
-- **Twitter:** @LexoraLang
+- **Website:** https://lexora-lang.onrender.com/
+- **Full Documentation:** https://lexora-lang.onrender.com/docs
+- **GitHub:** https://github.com/kingash2909/Lexora-Lang
+
 
 ---
 
-## 🛠️ Installation Options
+## 🛠️ Installation Options  [...COMMING SOON...]
 
 ### Option 1: Standalone Installer (Recommended)
 
@@ -386,33 +384,7 @@ choco install lexora
 
 ---
 
-## 🏆 Awards & Recognition
 
-*(Future goals)*
-- 🥇 Best Educational Programming Language 2026
-- 🌟 Most Beginner-Friendly Language
-- 💡 Innovation in Programming Education
-
----
-
-## 📄 License
-
-**MIT License** - Free to use for personal and commercial projects
-
-You are free to:
-- ✅ Use Lexora for any purpose
-- ✅ Modify the source code
-- ✅ Distribute copies
-- ✅ Sell products built with Lexora
-
-**Requirements:**
-- Include copyright notice
-- Include license text
-- State changes made
-
-See [LICENSE](LICENSE) file for full terms.
-
----
 
 ## 🙏 Acknowledgments
 
@@ -425,23 +397,6 @@ Special thanks to:
 - Font Awesome (icons)
 - Google Fonts (typography)
 - All beta testers and early adopters
-
----
-
-## 📞 Contact
-
-**General Inquiries:**
-- Email: hello@lexora.dev
-
-**Support:**
-- Email: support@lexora.dev
-- Discord: #support channel
-
-**Press:**
-- Email: press@lexora.dev
-
-**Business:**
-- Email: business@lexora.dev
 
 ---
 
@@ -480,10 +435,10 @@ Love Lexora? Support our mission to make programming accessible to everyone!
 **Ways to Support:**
 - ☕ Buy us a coffee
 - 🏢 Corporate sponsorship
-- 🎓 Educational grants
-- 💼 Hire our team
 
-Contact: sponsor@lexora.dev
+
+Contact: i.m.ashishhh@gmail.com
+WhatsApp: +91 73030 19154
 
 ---
 
@@ -500,33 +455,6 @@ It's not just a language - it's a movement.
 
 **Will you join us?**
 
----
-
-## 📈 Quick Links
-
-### Getting Started:
-- [Install Lexora](#-quick-start-30-seconds)
-- [Quick Start Guide](QUICKSTART.md)
-- [First Program](#-write-your-first-program)
-- [Web Editor](#-launch-web-editor)
-
-### Learning:
-- [Documentation](http://localhost:5001/docs)
-- [Examples](#-real-code-examples)
-- [Tutorials](https://lexora.dev/tutorials)
-- [FAQ](https://lexora.dev/faq)
-
-### Community:
-- [Discord Server](https://discord.gg/lexora)
-- [GitHub Repository](https://github.com/yourusername/lexora)
-- [Feature Requests](https://github.com/yourusername/lexora/issues)
-- [Bug Reports](https://github.com/yourusername/lexora/issues)
-
-### Contributing:
-- [Contributing Guide](CONTRIBUTING.md)
-- [Code of Conduct](CODE_OF_CONDUCT.md)
-- [Building from Source](PACKAGING_GUIDE.md)
-- [Translation Project](TRANSLATIONS.md)
 
 ---
 
