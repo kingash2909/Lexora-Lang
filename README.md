@@ -17,6 +17,9 @@ This is build using python programming language.
 LIVE PREVIEW - https://lexora-lang.onrender.com/
 
 GITHUB REPO - https://github.com/kingash2909/Lexora-Lang/
+
+
+
 ![ScreenRecording2026-03-25at10 18 35AM-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/ca1f59e4-b449-4e42-b226-d972e94a640b)
 
 
