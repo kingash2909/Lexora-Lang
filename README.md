@@ -14,6 +14,8 @@ Lexora is a **revolutionary programming language** that lets you write code in p
 
 This is build using python programming language.
 
+LIVE PREVIEW - https://lexora-lang.onrender.com/
+
 ### Before Lexora:
 ```python
 print(f"Hello, {name}!")
